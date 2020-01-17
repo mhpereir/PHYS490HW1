@@ -1,12 +1,11 @@
 import numpy as np
 import random as rnd
-import os
 import json
 import sys
 
-out_name  = sys.argv[1].split('.')[0]
+out_name  = sys.argv[1].split('.in')[0]
 
-in_file   = np.genfromtxt('./data/{}'.format(sys.argv[1]))
+in_file   = np.genfromtxt('{}'.format(sys.argv[1]))
 x         = in_file[:,0:-1]
 
 n_pts     = len(x[:,0])
@@ -17,7 +16,7 @@ X[:,1:]   = x
 Y         = in_file[:,-1]
 
 
-jfile     = open('./data/{}'.format(sys.argv[2]))
+jfile     = open('{}'.format(sys.argv[2]))
 json_file = json.load(jfile)
 alpha     = json_file['learning rate']
 n_iter    = json_file['num iter']
@@ -44,11 +43,11 @@ def walker(w):
 
 W_star_2 = walker(W_init)
 
-output_file = open('./data/{}.out'.format(out_name),'w')
+output_file = open('{}.out'.format(out_name),'w')
 for i in range(0,n_ws):
-    output_file.write('%.4G \n' % W_star_1[i])
+    output_file.write('{:.4f} \n'.format(round(W_star_1[i],4)))
 
 output_file.write('\n')
 
 for i in range(0,n_ws):
-    output_file.write('%.4G \n' % W_star_2[i])
+    output_file.write('{:.4f} \n'.format(round(W_star_2[i],4)))
