@@ -1,4 +1,4 @@
-# Assignment *number, e.g 1*
+# Assignment *number, 1*
 
 - name: Matthew Pereira Wilson
 - student ID: 20644035
@@ -15,5 +15,5 @@
 To run `main.py`, use
 
 ```sh
-python main.py file_name.in file_name.json
+python3 main.py file_name.in file_name.json
 ```
