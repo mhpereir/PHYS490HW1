@@ -1,12 +1,19 @@
-I've tweaked the json files to give better results with the gradient descent method.
+# Assignment *number, e.g 1*
 
-Expected input:
+- name: Matthew Pereira Wilson
+- student ID: 20644035
 
-python3 main.py data/NAME.in data/NAME.json
+## Dependencies
 
-output file name:
+- json
+- numpy
+- random
+- sys
 
-data/NAME.out
+## Running `main.py`
 
-required packages:
-numpy, random, json, sys
+To run `main.py`, use
+
+```sh
+python main.py file_name.in file_name.json
+```
